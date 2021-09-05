@@ -48,8 +48,10 @@ jobs:
           node -v
           echo "Versione di npm: "
           npm -v
-          npm install node@10.18.0
-          npm install -g npm@6.13.4
+          echo "Prova Downgrade di node: "
+          sudo npm install node@10.18.0
+          echo "Prova Downgrade di npm: "
+          sudo npm install -g npm@6.13.4
           echo "NUOVA Versione di node: "
           node -v
           echo "NUOVA Versione di npm: "
