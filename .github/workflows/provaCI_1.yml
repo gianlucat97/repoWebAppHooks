@@ -43,19 +43,18 @@ jobs:
           sudo apt update
           sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
           curl -sL https://deb.nodesource.com/setup_10.x | sudo bash
-          sudo apt update
-          sudo apt -y install gcc g++ make
-          sudo apt -y install nodejs
-          curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-          sudo apt-get update && sudo apt-get install yarn
+          sudo apt install nodejs
+          
+          sudo npm cache clean -f
+          sudo npm install -g n
+          sudo n stable
+          sudo n 10.18.0
+          
           echo "Versione di node: "
           node -v
           echo "Versione di npm: "
           npm -v
-          npm install -g node@10.18.0
-          echo "NUOVA Versione di node: "
-          node -v
+          
           
           
           
