@@ -58,6 +58,7 @@ jobs:
           npm install
           echo "Provo ad INSTALLARE bcrypt"
           npm install bcrypt
+          npm fund
           echo "vedi se ha fatto bene o no"
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
@@ -78,6 +79,7 @@ jobs:
           npm audit fix
           echo "Provo ad INSTALLARE bcrypt"
           npm install bcrypt
+          npm fund
           echo "vedi se ha fatto bene o no"
     
       - name: Step 7 - Ottieni path file ftl da modificare con gli Hooks
