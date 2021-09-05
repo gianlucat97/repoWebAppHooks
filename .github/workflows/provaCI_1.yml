@@ -41,7 +41,7 @@ jobs:
       - name: Step 5 - Installare Node versione 10 in Ubuntu
         run: |
           sudo apt update
-          sudo apt install build-essential apt-transport-https lsb-release ca-certificati curl
+          sudo apt install build-essential apt-transport-https lsb-release ca-certificates curl
           curl -sL https://deb.nodesource.com/setup_10.x | bash -
           sudo apt install nodejs
           echo "Versione di node: "
