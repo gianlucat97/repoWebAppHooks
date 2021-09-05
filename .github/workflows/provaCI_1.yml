@@ -42,7 +42,7 @@ jobs:
         run: |
           sudo apt update
           sudo apt install build-essential apt-transport-https lsb-release ca-certificates curl
-          curl -sL https://deb.nodesource.com/setup_10.x | bash -
+          curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
           sudo apt install nodejs
           echo "Versione di node: "
           node -v
