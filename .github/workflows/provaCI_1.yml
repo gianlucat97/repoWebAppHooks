@@ -55,7 +55,7 @@ jobs:
           echo "Versione di npm: "
           npm -v
           
-          
+          npm install
           
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
@@ -66,6 +66,10 @@ jobs:
           ls -a
           cd test-guard
           ls -a
+          echo "Versione di node: "
+          node -v
+          echo "Versione di npm: "
+          npm -v
           echo "Provo ad installare con npm install"
           npm install
           ls -a
