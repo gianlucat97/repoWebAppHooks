@@ -40,10 +40,10 @@ jobs:
        # Runs a set of commands using the runners shell
       - name: Step 5 - Installare Node versione 10 in Ubuntu
         run: |
-          sudo apt install curl
+          sudo apt update
+          sudo apt install build-essential apt-transport-https lsb-release ca-certificati curl
           curl -sL https://deb.nodesource.com/setup_10.x | bash -
           sudo apt install nodejs
-          npm install
           echo "Versione di node: "
           node -v
           echo "Versione di npm: "
