@@ -41,21 +41,14 @@ jobs:
       - name: Step 5 - Installare Node versione 10 in Ubuntu
         run: |
           sudo apt install curl
-          curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+          curl -sL https://deb.nodesource.com/setup_10.x | bash -
           sudo apt install nodejs
           npm install
           echo "Versione di node: "
           node -v
           echo "Versione di npm: "
           npm -v
-          echo "Prova Downgrade di node: "
-          sudo npm install node@10.18.0
-          echo "Prova Downgrade di npm: "
-          sudo npm install -g npm@6.13.4
-          echo "NUOVA Versione di node: "
-          node -v
-          echo "NUOVA Versione di npm: "
-          npm -v
+        
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
         run: | 
