@@ -56,6 +56,7 @@ jobs:
           echo "Provo ad installare con npm install"
           npm install
           ls -a
+          npm audit fix
     
       - name: Step 7 - Ottieni path file ftl da modificare con gli Hooks
         run: |
