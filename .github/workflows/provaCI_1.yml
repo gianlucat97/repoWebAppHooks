@@ -44,7 +44,6 @@ jobs:
           curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
           sudo apt install nodejs
           npm install
-          npm audit fix
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
         run: | 
@@ -76,6 +75,9 @@ jobs:
             ls -a
             echo "Visualizzazione file ftl prima dell injection! "
             cat /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
+            echo "Visualizza versione di node"
+            node -v
+            echo "INJECTION adesso..."
             node main.js inject-hooks /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl --grammar freemarker
             echo "Visualizzazione file ftl dopo l'injection!!! "
             cat /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
