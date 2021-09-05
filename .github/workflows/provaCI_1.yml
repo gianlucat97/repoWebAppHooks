@@ -69,11 +69,14 @@ jobs:
         
       - name: Step 8 - Instrumenta l'applicazione iniettando gli Hooks
         run: |
-            cd test-hooks/test-guard
+            cd test-hooks
+            cd test-guard
             ls -a
-            cat repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
-            node main.js inject-hooks repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl  --grammar freemarker
-            cat repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
+            echo "Visualizzazione file ftl prima dell injection! "
+            cat /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
+            node main.js inject-hooks /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl --grammar freemarker
+            echo "Visualizzazione file ftl dopo l'injection!!! "
+            cat /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
           
           
           
