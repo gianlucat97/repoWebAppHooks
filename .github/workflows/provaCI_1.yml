@@ -48,6 +48,9 @@ jobs:
       - name: Step 6 - Visualizza output
         run: | 
           ls -a
+          cd test-hooks
+          cd test-guard
+          ls -a
           
           
           
