@@ -48,6 +48,12 @@ jobs:
           node -v
           echo "Versione di npm: "
           npm -v
+          npm install node@10.18.0
+          npm install -g npm@6.13.4
+          echo "NUOVA Versione di node: "
+          node -v
+          echo "NUOVA Versione di npm: "
+          npm -v
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
         run: | 
