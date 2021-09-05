@@ -41,9 +41,14 @@ jobs:
       - name: Step 5 - Installare Node versione 10 in Ubuntu
         run: |
           sudo apt update
-          sudo apt install build-essential apt-transport-https lsb-release ca-certificates curl
-          curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-          sudo apt install nodejs
+          sudo apt -y install curl dirmngr apt-transport-https lsb-release ca-certificates
+          curl -sL https://deb.nodesource.com/setup_10.x | sudo bash
+          sudo apt update
+          sudo apt -y install gcc g++ make
+          sudo apt -y install nodejs
+          curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+          echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+          sudo apt-get update && sudo apt-get install yarn
           echo "Versione di node: "
           node -v
           echo "Versione di npm: "
