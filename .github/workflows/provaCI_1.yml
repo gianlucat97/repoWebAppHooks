@@ -42,7 +42,7 @@ jobs:
         run: |
           sudo apt install curl
           curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-          sudo apt install nodejs
+          sudo apt-get install -y nodejs
           npm install
           
       - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
