@@ -49,9 +49,14 @@ jobs:
         run: | 
           ls -a
           unzip test-hooks.zip
-          ls -a
           cd test-hooks
           ls -a
+          cd test-guard
+          ls -a
+          echo "Provo ad installare con npm install"
+          npm install
+          ls -a
+          
           
           
           
