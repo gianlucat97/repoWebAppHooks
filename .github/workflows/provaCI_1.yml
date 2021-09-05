@@ -38,14 +38,14 @@ jobs:
         run: ls -a
 
        # Runs a set of commands using the runners shell
-      - name: Step 5 - Installare Node versione 10 in Ubuntu nella cartella test-hooks/test-guard
+      - name: Step 5 - Installare Node versione 10 in Ubuntu
         run: |
           sudo apt install curl
           curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
           sudo apt install nodejs
           npm install
           
-      - name: Step 6 - Visualizza output
+      - name: Step 6 - Unzip test-hooks ed installazione dentro test-guard di npm
         run: | 
           ls -a
           unzip test-hooks.zip
@@ -56,6 +56,11 @@ jobs:
           echo "Provo ad installare con npm install"
           npm install
           ls -a
+          
+      - name: Step 7 - Vediamo in che cartella mi trovo
+        run: |
+            ls -a
+            
           
           
           
