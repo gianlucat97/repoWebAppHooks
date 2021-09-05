@@ -56,11 +56,17 @@ jobs:
           echo "Provo ad installare con npm install"
           npm install
           ls -a
+          cd WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view
+          ls -a
           
-      - name: Step 7 - Vediamo in che cartella mi trovo
+        
+      - name: Step 7 - Instrumenta l'applicazione iniettando gli Hooks
         run: |
+            cd test-hooks/test-guard
             ls -a
-            
+            cat WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
+            node main.js inject-hooks WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl  --grammar freemarker
+            cat WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
           
           
           
