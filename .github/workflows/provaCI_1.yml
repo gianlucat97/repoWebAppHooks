@@ -113,5 +113,10 @@ jobs:
           
           
           
+      - name: Step 9 - Run all the unit test classes
+        run: |
+            mvn test
+          
+          
           
           
