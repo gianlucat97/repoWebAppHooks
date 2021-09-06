@@ -122,8 +122,8 @@ jobs:
           
       - name: Step 10 - Set a DISPLAY
         run: |
-            apt-get install xvfb
-            apt-get install firefox-mozilla-build
+            sudo apt-get install xvfb
+            sudo apt-get install firefox-mozilla-build
             Xvfb &
             export DISPLAY=localhost:0.0
             java -jar selenium-java-3.141.0.jar
