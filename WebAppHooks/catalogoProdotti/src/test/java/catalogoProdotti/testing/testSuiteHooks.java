@@ -20,7 +20,7 @@ public class testSuiteHooks {
 
 	  @Before
 	  public void setUp() throws Exception {
-		System.setProperty("webdriver.gecko.driver", "/home/runner/work/repoWebAppHooks/repoWebAppHooks/geckodriver-linux/geckodriver");
+		//System.setProperty("webdriver.gecko.driver", "/home/runner/work/repoWebAppHooks/repoWebAppHooks/geckodriver-linux/geckodriver");
 		driver = new FirefoxDriver();
 	    baseUrl = "https://www.google.com/";
 	    driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
