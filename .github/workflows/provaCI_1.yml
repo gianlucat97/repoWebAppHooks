@@ -126,7 +126,11 @@ jobs:
             Xvfb &
             echo "Visualizzazione lista di Display a cui ci si può connettere"
             export MOZ_HEADLESS=1
-          
+            echo "Vediamo PRIMA il valore di display"
+            echo $DISPLAY
+            DISPLAY=127.0.0.1:0.0 $ export DISPLAY 
+            echo $DISPLAY
+            echo "Vediamo DOPO il valore di display"
           
           
       - name: Step 11 - Run all the unit test classes
