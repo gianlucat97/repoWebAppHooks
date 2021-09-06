@@ -125,7 +125,6 @@ jobs:
             sudo apt-get install xvfb
             Xvfb &
             echo "Visualizzazione lista di Display a cui ci si può connettere"
-            xauth list
             export MOZ_HEADLESS=1
           
           
