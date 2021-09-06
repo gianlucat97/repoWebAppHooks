@@ -115,6 +115,8 @@ jobs:
           
       - name: Step 9 - Run all the unit test classes
         run: |
+            cd WebAppHooks
+            cd catalogoProdotti
             mvn test
           
           
