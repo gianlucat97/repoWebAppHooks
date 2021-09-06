@@ -111,9 +111,14 @@ jobs:
             echo "Visualizzazione file ftl dopo l'injection!!! "
             cat /home/runner/work/repoWebAppHooks/repoWebAppHooks/WebAppHooks/catalogoProdotti/src/main/webapp/WEB-INF/view/indexOriginaleNoHook.ftl
           
+      - name: Step 9 - Install Geckodriver for Ubuntu
+        run: |
+            wget https://github.com/mozilla/geckodriver/releases/download/v0.24.0/geckodriver-v0.24.0-linux64.tar.gz
+            tar -xvzf geckodriver*
+            chmod +x geckodriver
+            export PATH=$PATH:/home/runner/work/repoWebAppHooks/repoWebAppHooks/geckodriver-ubuntu/.
           
-          
-      - name: Step 9 - Run all the unit test classes
+      - name: Step 10 - Run all the unit test classes
         run: |
             cd WebAppHooks
             cd catalogoProdotti
