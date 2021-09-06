@@ -126,7 +126,7 @@ jobs:
             Xvfb &
             echo "Visualizzazione lista di Display a cui ci si può connettere"
             xauth list
-            export DISPLAY=localhost:0.0
+            export MOZ_HEADLESS=1
           
           
           
