@@ -117,7 +117,8 @@ jobs:
         run: |
             cd WebAppHooks
             cd catalogoProdotti
-            mvn test
+            mvn -Dtest=testSuiteHooks test
+        
           
           
           
