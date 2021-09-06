@@ -122,11 +122,12 @@ jobs:
           
       - name: Step 10 - Set a DISPLAY
         run: |
-            sudo apt-get install xvfb
-            Xvfb &
-            echo "Visualizzazione lista di Display a cui ci si può connettere"
-            export MOZ_HEADLESS=1
-            this->setDesiredCapabilities(['moz:firefoxOptions'=> ['args' => ['-headless']]]);          
+            sudo apt-get -qy --no-install-recommends install xvfb
+            sudo set -e
+            echo "Starting X virtual framebuffer (Xvfb) in background..."
+            Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 &
+            export DISPLAY=:99
+            exec "$@"
           
       - name: Step 11 - Run all the unit test classes
         run: |
