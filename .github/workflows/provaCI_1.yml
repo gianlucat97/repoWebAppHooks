@@ -41,6 +41,8 @@ jobs:
         run: |
           sudo apt-get install network-manager
           nmcli dev status
+          nmcli dev show eth0
+          nmcli dev show docker0
 
 
 
