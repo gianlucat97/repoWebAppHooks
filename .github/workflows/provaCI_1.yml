@@ -38,7 +38,9 @@ jobs:
         run: ls -a
 
       - name: Step 4 - List the current directory
-        run: nmcli dev status
+        run: |
+          sudo apt-get install network-manager
+          nmcli dev status
 
 
 
