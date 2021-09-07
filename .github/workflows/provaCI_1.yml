@@ -122,10 +122,10 @@ jobs:
           
       - name: Step 10 - Set a DISPLAY
         run: |
-            echo "Vediamo PRIMA se ha impostato Displayt"
+            echo "Vediamo PRIMA se ha impostato Display"
             echo $DISPLAY
             export DISPLAY=:0
-            echo "Vediamo DOPO se ha impostato Displayt"
+            echo "Vediamo DOPO se ha impostato Display"
             echo $DISPLAY
           
           
@@ -133,6 +133,11 @@ jobs:
         run: |
             cd WebAppHooks
             cd catalogoProdotti
+            echo "Vediamo PRIMA se ha impostato Display"
+            echo $DISPLAY
+            export DISPLAY=:0
+            echo "Vediamo DOPO se ha impostato Display"
+            echo $DISPLAY
             mvn -Dtest=Prova1 test
         
           
