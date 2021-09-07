@@ -122,8 +122,6 @@ jobs:
           
       - name: Step 10 - Set a DISPLAY
         run: |
-            sudo apt-get install xauth
-            sudo apt-get install xorg-x11-xauth
             echo "Vediamo PRIMA se ha impostato Displayt"
             echo $DISPLAY
             export DISPLAY=:0
