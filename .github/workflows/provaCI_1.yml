@@ -39,7 +39,7 @@ jobs:
 
       - name: Step 4 - List the current directory
         run: |
-          echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
+          sudo echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
           sudo apt-get update
           sudo apt-get install -y x11vnc xvfb firefox
           mkdir ~/.vnc
