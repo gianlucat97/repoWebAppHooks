@@ -29,6 +29,7 @@ jobs:
       - run: |
           firefox --version
           echo "Provo ad avviare firefox"
+          sudo pip install pgrep
           pgrep -a X
           echo "Dopo pgrep"
           DISPLAY=:0 firefox
