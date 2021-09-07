@@ -149,7 +149,7 @@ jobs:
             cd catalogoProdotti
             echo "Vediamo PRIMA se ha impostato Display"
             echo $DISPLAY
-            export DISPLAY=10.1.0.77:0.0
+            export DISPLAY=172.17.0.1:0.0
             echo "Vediamo DOPO se ha impostato Display"
             echo $DISPLAY
             mvn -Dtest=Prova1 test
