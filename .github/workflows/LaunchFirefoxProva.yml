@@ -29,4 +29,6 @@ jobs:
       - run: |
           firefox --version
           echo "Provo ad avviare firefox"
-          firefox
+          pgrep -a X
+          DISPLAY=:0 firefox
+        
