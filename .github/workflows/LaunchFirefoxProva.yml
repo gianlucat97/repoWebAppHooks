@@ -30,6 +30,7 @@ jobs:
           firefox --version
           echo "Provo ad avviare firefox"
           sudo apt install firefox xorg
+          sudo apt-get install xinit
           echo "Vediamo il contenuto del file Xwrapper.config"
           cat /etc/X11/Xwrapper.config
           sudo startx
