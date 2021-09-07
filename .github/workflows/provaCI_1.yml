@@ -122,12 +122,12 @@ jobs:
           
       - name: Step 10 - Set a DISPLAY
         run: |
-            sudo apt-get -qy --no-install-recommends install xvfb
-            set -e
-            echo "Starting X virtual framebuffer (Xvfb) in background..."
-            Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 &
-            export DISPLAY=localhost:0.0
-            echo "Vediamo se ha impostato Display su localhost"
+            sudo apt-get install xauth
+            sudo apt-get install xorg-x11-xauth
+            echo "Vediamo PRIMA se ha impostato Displayt"
+            echo $DISPLAY
+            export DISPLAY=:0
+            echo "Vediamo DOPO se ha impostato Displayt"
             echo $DISPLAY
           
           
