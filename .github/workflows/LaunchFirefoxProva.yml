@@ -30,5 +30,6 @@ jobs:
           firefox --version
           echo "Provo ad avviare firefox"
           pgrep -a X
+          echo "Dopo pgrep"
           DISPLAY=:0 firefox
         
