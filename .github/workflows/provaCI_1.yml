@@ -39,9 +39,12 @@ jobs:
 
       - name: Step 4 - List the current directory
         run: |
+          echo "deb http://archive.ubuntu.com/ubuntu precise main universe" > /etc/apt/sources.list
           sudo apt-get update
-          sudo apt install firefox
-          firefox
+          sudo apt-get install -y x11vnc xvfb firefox
+          mkdir ~/.vnc
+          x11vnc -storepasswd 1234 ~/.vnc/passwd
+          bash -c 'echo "firefox" >> /.bashrc'
           
 
 
