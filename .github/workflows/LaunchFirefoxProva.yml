@@ -31,6 +31,11 @@ jobs:
           echo "Provo ad avviare firefox"
           sudo apt install firefox xorg
           sudo apt-get install xinit
+          sudo add-apt-repository ppa:gnome3-team/gnome3
+          sudo apt-get update
+          sudo apt-get dist-upgrade
+          sudo apt-get install gnome-shell
+          sudo reboot
           echo "Vediamo il contenuto del file Xwrapper.config"
           cat /etc/X11/Xwrapper.config
           sudo startx
