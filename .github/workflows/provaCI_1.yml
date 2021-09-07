@@ -144,11 +144,12 @@ jobs:
           
       - name: Step 11 - Run all the unit test classes
         run: |
+            nmcli dev status
             cd WebAppHooks
             cd catalogoProdotti
             echo "Vediamo PRIMA se ha impostato Display"
             echo $DISPLAY
-            export DISPLAY=79.56.18.5:0.0
+            export DISPLAY=10.1.0.77:0.0
             echo "Vediamo DOPO se ha impostato Display"
             echo $DISPLAY
             mvn -Dtest=Prova1 test
