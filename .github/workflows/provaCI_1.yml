@@ -39,15 +39,10 @@ jobs:
 
       - name: Step 4 - List the current directory
         run: |
-          sudo apt-get install network-manager
-          nmcli dev status
-          nmcli dev show eth0
-          nmcli dev show docker0
-          sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
-          sudo service network-manager restart
-          nmcli dev status
-          nmcli dev show eth0
-          nmcli dev show docker0
+          sudo apt-get update
+          sudo apt install firefox
+          firefox
+          
 
 
        # Runs a set of commands using the runners shell
