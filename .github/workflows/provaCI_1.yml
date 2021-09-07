@@ -43,7 +43,11 @@ jobs:
           nmcli dev status
           nmcli dev show eth0
           nmcli dev show docker0
-
+          sudo touch /etc/NetworkManager/conf.d/10-globally-managed-devices.conf
+          sudo service network-manager restart
+          nmcli dev status
+          nmcli dev show eth0
+          nmcli dev show docker0
 
 
        # Runs a set of commands using the runners shell
