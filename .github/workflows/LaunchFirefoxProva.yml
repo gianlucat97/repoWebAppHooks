@@ -34,9 +34,11 @@ jobs:
      
       - name: Step 4 - Firefox
         run: |
-          sudo apt-get update && sudo apt-get install -y firefox      
-          cmd ["/usr/bin/firefox"]
-          docker-compose build
-          docker-compose up
-          
+          docker run -it \
+            --env="DISPLAY" \
+            --env="QT_X11_NO_MITSHM=1" \
+            --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+            osrf/ros:indigo-desktop-full \
+            rqt
+          export containerId=$(docker ps -l -q)
           
