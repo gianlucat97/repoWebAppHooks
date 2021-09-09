@@ -40,7 +40,7 @@ jobs:
             --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
             osrf/ros:indigo-desktop-full \
             xhost +
-            sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --env="QT_X11_NO_MITSHM=1" <image_name> <arguments>
+            sudo docker run --rm -ti --net=host --ipc=host -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix --env="QT_X11_NO_MITSHM=1" <osrf/ros:indigo-desktop-full> <arguments>
             rqt
           export containerId=$(docker ps -l -q)
           
